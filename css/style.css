@@ -96,6 +96,10 @@ footer {
   text-align: center;
 }
 
+.blog-message {
+  text-align: center;
+}
+
 .gallery {
   display: block;
 }
