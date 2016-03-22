@@ -8,70 +8,45 @@
     <!-- <meta name="viewport" content="width-device-width, initial-scale-1.0"> what is meta name? -->
   </head>
   <body ng-controller="MainCtrl">
-    <header>
-      <div class="logo">
-        <a href="index.html">
-          <h1>Kristin Caffray</h1>
-          <h2>Photographer</h2>
-        </a>
+    <div id="wrapper">
+      <div id="header">
+        <div class="logo">
+          <a href="index.html">
+            <h1>Kristin Caffray</h1>
+            <h2>Photographer</h2>
+          </a>
+        </div>
+        <div class="dropdown">
+          <button onclick="myFunction()" class="dropbtn">Menu</button>
+            <div id="myDropdown" class="dropdown-content">
+              <a href="index.html" class="selected">Photos</a>
+              <a href="about.html">About</a>
+              <a href="blog.html">Blog</a>
+              <a href="contact.html">Contact</a>
+            </div>
+        </div>
       </div>
-      <div class="dropdown">
-        <button onclick="myFunction()" class="dropbtn">Menu</button>
-          <div id="myDropdown" class="dropdown-content">
-            <a href="index.html" class="selected">Photos</a>
-            <a href="about.html">About</a>
-            <a href="blog.html">Blog</a>
-            <a href="contact.html">Contact</a>
-          </div>
+      <div id="content">
+
+        <div class="container slider">
+            <img ng-repeat="slide in slides" class="slide slide-animation nonDraggableImage"
+                 ng-swipe-right="nextSlide()" ng-swipe-left="prevSlide()"
+                 ng-hide="!isCurrentSlideIndex($index)" ng-src="{{slide.image}}">
+
+            <a class="arrow prev" href="#" ng-click="nextSlide()"></a>
+            <a class="arrow next" href="#" ng-click="prevSlide()"></a>
+            <nav class="nav">
+                <div class="wrapper">
+                    <ul class="dots">
+                        <li class="dot" ng-repeat="slide in slides">
+                            <a href="#" ng-class="{'active':isCurrentSlideIndex($index)}"
+                               ng-click="setCurrentSlideIndex($index);">{{slide.description}}</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
       </div>
-      <!-- <nav class="main-nav">
-        <ul>
-          <li><a href="index.html" class="selected">Photos</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="blog.html">Blog</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav> -->
-    </header>
-    <div class="wrapper">
-
-      <div class="container slider">
-          <img ng-repeat="slide in slides" class="slide slide-animation nonDraggableImage"
-               ng-swipe-right="nextSlide()" ng-swipe-left="prevSlide()"
-               ng-hide="!isCurrentSlideIndex($index)" ng-src="{{slide.image}}">
-
-          <a class="arrow prev" href="#" ng-click="nextSlide()"></a>
-          <a class="arrow next" href="#" ng-click="prevSlide()"></a>
-          <nav class="nav">
-              <div class="wrapper">
-                  <ul class="dots">
-                      <li class="dot" ng-repeat="slide in slides">
-                          <a href="#" ng-class="{'active':isCurrentSlideIndex($index)}"
-                             ng-click="setCurrentSlideIndex($index);">{{slide.description}}</a></li>
-                  </ul>
-              </div>
-          </nav>
-      </div>
-
-<!-- CODE OMITTED -->
-      <!-- <section>
-        <ul class="gallery">
-          <li>
-            <a href="img/OccupyBoston/front_image_500w.jpeg">
-              <img src="img/OccupyBoston/front_image_500w.jpeg" alt="">
-              <p>Occupy Boston</p>
-            </a>
-          </li>
-          <li>
-            <a href="img/LifeStyle/Caffray_150919-9174.jpg">
-              <img src="img/LifeStyle/Caffray_150919-9174.jpg" alt="">
-              <p>Life Style</p>
-            </a>
-          </li>
-
-        </ul>
-      </section> -->
-      <footer class="main-footer">
+      <div id="footer">
         <ul>
           <li><a href="http://instagram.com/yeahokayok"><img src="img/instagram-vector.png" alt="Instagram Logo" class="social-icon"></a></li>
           <li><a href="http://vsco.co/honeywest"><img src="img/vsco-vector.png" alt="VSCO Logo" class="social-icon"></a></li>
@@ -79,12 +54,12 @@
           <li><a href="contact.html"><img src="img/email-vector.png" alt="Email Logo"  class="social-icon"></a></li>
         </ul>
         <p>&copy; 2016 Mike Evans  |  Developer</p>
-      </footer>
+      </div>
+      <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0-rc.2/angular.min.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0-rc.2/angular-animate.min.js"></script>
+      <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.10.3/TweenMax.min.js"></script>
+      <script src="js/app.js"></script>
     </div>
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0-rc.2/angular.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0-rc.2/angular-animate.min.js"></script>
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.10.3/TweenMax.min.js"></script>
-    <script src="js/app.js"></script>
   </body>
 </html>
