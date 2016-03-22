@@ -14,20 +14,19 @@ GENERAL
   Base Element Styles
 ==================================== */
 
+html {
+  min-height:100%;
+  position: relative;
+}
+
+
 body {
   color: #3b3a36;
   margin:0;
   padding:0;
-  height:100%;
 }
 
-#wrapper {
-	min-height:100%;
-  height: 100%;
-	position:relative;
-}
-
-#header {
+header {
   padding:10px;
   margin-bottom: 2em;
   background-color: #c0dfd9;
@@ -40,7 +39,7 @@ body {
   text-align: center;
 }
 
-#footer {
+footer {
 	position: absolute;
   bottom: 0;
   background: white;

@@ -8,8 +8,7 @@
     <!-- <meta name="viewport" content="width-device-width, initial-scale-1.0"> what is meta name? -->
   </head>
   <body ng-controller="MainCtrl">
-    <div id="wrapper">
-      <div id="header">
+      <header>
         <div class="logo">
           <a href="index.html">
             <h1>Kristin Caffray</h1>
@@ -25,7 +24,7 @@
               <a href="contact.html">Contact</a>
             </div>
         </div>
-      </div>
+      </header>
       <div id="content">
         <div class="container slider">
           <img ng-repeat="slide in slides" class="slide slide-animation nonDraggableImage"
@@ -45,16 +44,16 @@
           </nav>
         </div>
       </div>
-      <div id="footer">
-        <ul>
-          <li><a href="http://instagram.com/yeahokayok"><img src="img/instagram-vector.png" alt="Instagram Logo" class="social-icon"></a></li>
-          <li><a href="http://vsco.co/honeywest"><img src="img/vsco-vector.png" alt="VSCO Logo" class="social-icon"></a></li>
-          <li><a href="https://open.spotify.com/user/letsheadwest"><img src="img/spotify-vector.png" alt="Spotify Logo" class="social-icon"></a></li>
-          <li><a href="contact.html"><img src="img/email-vector.png" alt="Email Logo"  class="social-icon"></a></li>
-        </ul>
-        <p>&copy; 2016 Mike Evans  |  Developer</p>
-      </div>
     </div>
+    <footer>
+      <ul>
+        <li><a href="http://instagram.com/yeahokayok"><img src="img/instagram-vector.png" alt="Instagram Logo" class="social-icon"></a></li>
+        <li><a href="http://vsco.co/honeywest"><img src="img/vsco-vector.png" alt="VSCO Logo" class="social-icon"></a></li>
+        <li><a href="https://open.spotify.com/user/letsheadwest"><img src="img/spotify-vector.png" alt="Spotify Logo" class="social-icon"></a></li>
+        <li><a href="contact.html"><img src="img/email-vector.png" alt="Email Logo"  class="social-icon"></a></li>
+      </ul>
+      <p>&copy; 2016 Mike Evans  |  Developer</p>
+    </footer>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0-rc.2/angular.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0-rc.2/angular-animate.min.js"></script>
