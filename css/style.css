@@ -7,7 +7,6 @@ GENERAL
   padding: 0px;
 	box-sizing: border-box;
   font-family: Big Caslon, Book Antiqua, Palatino Linotype, Georgia, serif;
-
 }
 
 /* =================================
@@ -72,6 +71,7 @@ a {
 
 img {
   max-width: 100%;
+  max-height: 650px;
 }
 
 /* =================================
