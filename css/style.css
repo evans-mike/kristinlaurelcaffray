@@ -133,7 +133,7 @@ img {
 ==================================== */
 
 .slider {
-    position: inherit;
+    position: relative;
     border: 1em solid #FFF;
     margin-top: 0;
 }
