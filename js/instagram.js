@@ -4,7 +4,7 @@ $.ajax({
     cache: false,
     url: "https://api.instagram.com/v1/users/329396167/?access_token=458814967.b7572ad.f759e9bc61a5439a84fc455fc84dd503",
     success: function(data) {
-      for (var i = 0; i < 6; i++) {
+      for (var i = 0; i < 20; i++) {
         $(".instagram").append("<li><a target='_blank' href='" + data.data[i].link + "'><img src='" + data.data[i].images.low_resolution.url + "'></img></a></li>");
         }
       }
