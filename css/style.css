@@ -43,6 +43,7 @@ header {
 footer {
   font-size: .8em;
   position: absolute;
+  padding-top: 1em;
   bottom: 0;
   background: white;
 	width: 100%;
@@ -134,7 +135,7 @@ img {
 
 .slider {
     position: relative;
-    border: 1em solid #FFF;
+    border-bottom: : 0 solid #FFF;
     margin-top: 0;
 }
 
