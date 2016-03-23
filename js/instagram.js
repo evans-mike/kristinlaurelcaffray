@@ -18,7 +18,8 @@
 
 $.getJSON("https://api.instagram.com/v1/recent?access_token=458814967.b7572ad.f759e9bc61a5439a84fc455fc84dd503&callback=callbackFunction",
   {
-    author_id: 458814967
+    author_id: 458814967,
+    format: "json"
   },
   function (data){
     var photoHTML = '<ul>';
