@@ -34,6 +34,7 @@ header {
 }
 
 #content {
+  text-align: center;
   padding-bottom:100px; /* Height of the footer element */
   margin-left: 1em;
   margin-right: 1em;
@@ -273,8 +274,19 @@ NAV
   padding-right: 2px;
 }
 
-.blog-message {
+
+#profile {
+  position: inherit;
+  border: 2em;
+  padding: 2em;
   text-align: center;
+}
+
+#contact_script {
+  text-align: center;
+  border: 2em;
+  padding: 2em;
+  font-size: 1.2em;
 }
 
 .social-icon {
@@ -284,10 +296,92 @@ NAV
 }
 
 /* =================================
+  Contact Form
+==================================== */
+
+
+form {
+  max-width: 500px;
+  margin: 10px auto;
+  padding: 10px 20px;
+  background: #e9ece5;
+  border-radius: 3px;
+}
+
+
+input[type="text"],
+input[type="date"],
+input[type="datetime"],
+input[type="email"],
+textarea,
+select {
+  background: rgba(255,255,255,0.1);
+  border: none;
+  font-size: 1.1em;
+  height: auto;
+  margin: 0;
+  outline: 0;
+  padding: 15px;
+  width: 100%;
+  background-color: #f9f9f9;
+  color: #8a97a0;
+  box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+  margin-bottom: 30px;
+}
+
+select {
+  padding: 6px;
+  height: 32px;
+  border-radius: 2px;
+}
+
+button {
+  padding: 19px 39px 18px 39px;
+  color: #FFF;
+  background-color: GRey;
+  font-size: 1.1em;
+  text-align: center;
+  font-style: normal;
+  border-radius: 2px;
+  width: 150px;
+  border-width: 1px 1px 3px;
+  box-shadow: 0 -1px -1px 0 rgba(255,255,255,0.1) inset;
+  margin-bottom: 10px;
+}
+
+fieldset {
+  margin-bottom: 30px;
+  border: none;
+}
+
+legend {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  text-align: left;
+  font-size: 1.1em;
+}
+
+label.light {
+  font-weight: 300;
+  display: inline;
+}
+
+
+/* =================================
   Media Queries
 ==================================== */
 
-@media screen and (min-width: 480px) {}
+@media screen and (min-width: 480px) {
+
+  form {
+    max-width: 600px;
+  }
+}
 
 @media screen and (min-width: 660px) {
 
