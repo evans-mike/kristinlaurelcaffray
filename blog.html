@@ -39,10 +39,13 @@
           $('.instagram').on('didLoadInstagram', function(event, response) {
             console.log(response);
           });
+          $(document).ready(function() {
+            var accessToken = '458814967.b7572ad.f759e9bc61a5439a84fc455fc84dd503';
+            var userID = 329396167;
           $('.instagram').instagram({
-            userID = 458814967,
+            userID = userID,
             show: 15,
-            accessToken: b7572ad.f759e9bc61a5439a84fc455fc84dd503
+            accessToken: accessToken,
           });
         });
         </script>
