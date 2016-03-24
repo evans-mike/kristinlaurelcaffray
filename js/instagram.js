@@ -1,3 +1,24 @@
+// This section is my code
+jQuery(function($) {
+  $('.instagram').on('willLoadInstagram', function(event, options) {
+    console.log(options);
+  });
+  $('.instagram').on('didLoadInstagram', function(event, response) {
+    console.log(response);
+  });
+  $(document).ready(function() {
+    var user_id = 458814967;
+    var clientId = 'b7572adb1b3f4fd2b563e8fc8fe81530';
+    var accessToken = '458814967.b7572ad.f759e9bc61a5439a84fc455fc84dd503';
+    $('.instagram').instagram({
+      user_id: user_id,
+      show: 15,
+      clientId: clientId,
+      accessToken: accessToken
+    });
+  });
+});
+
 /*! jQuery Instagram - v0.3.1 - 2014-06-19
 * http://potomak.github.com/jquery-instagram
 * Copyright (c) 2014 Giovanni Cappellotto; Licensed MIT */
