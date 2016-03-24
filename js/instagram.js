@@ -27,11 +27,11 @@
       url += '/media/search';
       data = $.extend(data, options.search);
     }
-    else if (options.id != null) {
+    else if (options.user_id != null) {
       if (options.accessToken == null) {
         throw 'You must provide an access token';
       }
-      url += '/users/' + options.id + '/media/recent';
+      url += '/users/' + options.user_id + '/media/recent';
     }
     else if (options.location != null) {
       url += '/locations/' + options.location.id + '/media/recent';
@@ -70,7 +70,7 @@
     count: null,
     url: null,
     hash: null,
-    author_id: null,
+    user_id: null,
     location: null,
     search: null
   };
