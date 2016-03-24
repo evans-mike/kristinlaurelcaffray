@@ -4,7 +4,15 @@ jQuery(function($) {
     console.log(options);
   });
   $('.instagram').on('didLoadInstagram', function(event, response) {
-    console.log(response);
+    console.log(response.data[0].images.standard_resolution.url);
+    function printFeed(response){
+      var listHTML = '<ol>';
+      var picture = '<li><img src="'+ response.data[0].images.standard_resolution.url +'" alt="imagefeed"></li>';
+      listHTML += picture;
+      listHTML += '</ol>';
+      $(".instagram").html(listHTML);
+    }
+    printFeed(response);
   });
   $(document).ready(function() {
     var user_id = 458814967;
