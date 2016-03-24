@@ -27,11 +27,11 @@
       url += '/media/search';
       data = $.extend(data, options.search);
     }
-    else if (options.userId != null) {
+    else if (options.author_id != null) {
       if (options.accessToken == null) {
         throw 'You must provide an access token';
       }
-      url += '/users/' + options.userId + '/media/recent';
+      url += '/users/' + options.author_id + '/media/recent';
     }
     else if (options.location != null) {
       url += '/locations/' + options.location.id + '/media/recent';
