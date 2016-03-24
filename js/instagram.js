@@ -70,7 +70,7 @@
     count: null,
     url: null,
     hash: null,
-    userId: null,
+    author_id: null,
     location: null,
     search: null
   };
