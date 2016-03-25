@@ -10,7 +10,7 @@ jQuery(function($) {
       // var i = 0;
       // var captiontext = response.data[i].caption.text;
       // var photo = response.data[i].images.standard_resolution.url;
-      var listHTML = '<ol>';
+      var listHTML = '<ul id="instagramFeed">';
 
       for (var i = 0; i <= 15; i++) {
         var r = response.data[i];
@@ -22,7 +22,7 @@ jQuery(function($) {
         listHTML += caption
         listHTML +=' - @evans_mike</p></li>';
         }
-      listHTML += '</ol>';
+      listHTML += '</ul>';
       $(".instagram").html(listHTML);
     }
     printFeed(response);
