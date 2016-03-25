@@ -5,12 +5,23 @@ jQuery(function($) {
   });
   $('.instagram').on('didLoadInstagram', function(event, response) {
     console.log(response);
-    var caption = response.data[0].caption.text;
-    var photo = response.data[0].images.standard_resolution.url;
+
     function printFeed(response){
+      // var i = 0;
+      // var captiontext = response.data[i].caption.text;
+      // var photo = response.data[i].images.standard_resolution.url;
       var listHTML = '<ol>';
-      var picture = '<li><img src="'+ response.data[0].images.standard_resolution.url +'" alt="imagefeed"><p>"'+response.data[0].caption.text+'" - @evans_mike</p></li>';
-      listHTML += picture;
+
+      for (var i = 0; i <= 15; i++) {
+        var r = response.data[i];
+        var photo = r.images.standard_resolution.url;
+        var caption = r.caption.text;
+        var link = r.link;
+        listHTML += '<li><a target="_blank" href="' + link +'"><img src="'
+        listHTML += photo +'" alt="imagefeed"></a><p>'
+        listHTML += caption
+        listHTML +=' - @evans_mike</p></li>';
+        }
       listHTML += '</ol>';
       $(".instagram").html(listHTML);
     }
